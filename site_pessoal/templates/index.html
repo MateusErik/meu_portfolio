@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Início - Mateus Erik{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container-principal">
+    
+    <section id="sobre" class="sessao">
+        <h2 class="titulo-secao">Sobre Mim</h2>
+        <p class="texto-destaque">
+            Olá! Eu sou o <strong>Mateus Erik</strong>, um desenvolvedor apaixonado por tecnologia, automação e pela criação de soluções para problemas complexos.
+        </p>
+
+        <h3 class="subtitulo">🎓 Minha Jornada</h3>
+        <ul class="jornada-lista">
+            <li>
+                <span class="ano">2022 (16 anos)</span>
+                <p>Concluí o Ensino Médio + Técnico em Informática. Onde a minha curiosidade e paixão pela tecnologia começaram.</p>
+            </li>
+            <li>
+                <span class="ano">2023 (17 anos)</span>
+                <p>Ingressei na graduação de Análise e Desenvolvimento de Sistemas (ADS).</p>
+            </li>
+            <li>
+                <span class="ano">2025 (19 anos)</span>
+                <p>Formação em ADS e início da graduação em <strong>Ciência de Dados</strong> (cursando atualmente).</p>
+            </li>
+        </ul>
+
+        <h3 class="subtitulo">💼 Experiência Profissional</h3>
+        <ul class="experiencia-lista">
+            <li class="card-simples">
+                <span class="icone-card">🏢</span>
+                <strong>Onde:</strong><br> Nexa - Tecnologia e Inovação (Estagiário desde Ago/2025).
+            </li>
+            <li class="card-simples">
+                <span class="icone-card">💻</span>
+                <strong>O que faço:</strong><br> Desenvolvimento Web (Full-Stack).
+            </li>
+            <li class="card-simples">
+                <span class="icone-card">⚙️</span>
+                <strong>Stack:</strong><br> Front-end (HTML, CSS, JS) e Back-end (Django).
+            </li>
+            <li class="card-simples">
+                <span class="icone-card">🎯</span>
+                <strong>Objetivo:</strong><br> Criar sistemas inteligentes que otimizam fluxos de trabalho.
+            </li>
+        </ul>
+    </section>
+
+    <section id="projetos" class="sessao">
+        <h2 class="titulo-secao">🚀 Meus Projetos</h2>
+        <div class="grid-projetos">
+            <a href="{% static 'projetos/projeto1.html' %}" class="card-projeto">
+                <h3>Projeto 1</h3>
+                <p>Clique para ver os detalhes do projeto.</p>
+            </a>
+            <a href="{% static 'projetos/projeto2.html' %}" class="card-projeto">
+                <h3>Projeto 2</h3>
+                <p>Clique para ver os detalhes do projeto.</p>
+            </a>
+            <a href="{% static 'projetos/projeto3.html' %}" class="card-projeto">
+                <h3>Projeto 3</h3>
+                <p>Clique para ver os detalhes do projeto.</p>
+            </a>
+        </div>
+    </section>
+
+</div>
+{% endblock %}

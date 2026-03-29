@@ -1,0 +1,145 @@
+/* =========================================
+   ESTILOS ESPECÍFICOS DA PÁGINA INICIAL
+========================================= */
+
+.container-principal {
+    /* O visual da caixa */
+    background-color: #181818;
+    border: 1px solid #333;
+    border-radius: 16px; 
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); 
+    
+    /* Organização interna */
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+}
+/* Fundo arredondado para cada seção */
+.sessao {
+    background-color: #1a1a1a;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid #2a2a2a;
+}
+
+.titulo-secao {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.subtitulo {
+    margin: 30px 0 15px 0;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.texto-destaque {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+}
+
+/* === LINHA DO TEMPO (Jornada) === */
+.jornada-lista {
+    list-style: none;
+    padding-left: 15px;
+    border-left: 3px solid var(--primary-color);
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.jornada-lista li {
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* A bolinha da linha do tempo */
+.jornada-lista li::before {
+    content: '';
+    position: absolute;
+    left: -24px; /* Alinha no meio da borda */
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background-color: var(--bg-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+}
+
+.jornada-lista .ano {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* === CARDS DE EXPERIÊNCIA === */
+.experiencia-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.card-simples {
+    background-color: var(--surface-color);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-simples:hover {
+    transform: translateY(-5px); /* Efeito de pular ao passar o mouse */
+    border-color: var(--primary-color);
+}
+
+.icone-card {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* === GRID DE PROJETOS === */
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card-projeto {
+    display: block;
+    background-color: var(--surface-color);
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-primary);
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.card-projeto h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.card-projeto:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.card-projeto:hover h3, 
+.card-projeto:hover p {
+    color: #fff;
+}

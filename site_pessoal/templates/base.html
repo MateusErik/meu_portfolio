@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mateus Erik - Portfólio{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block extra_css %}{% endblock %} 
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Mateus Erik</div>
+        <nav class="nav-links">
+            <a href="{% url 'index' %}">Início</a>
+            <a href="{% url 'sobre' %}">Sobre</a>
+            <a href="{% url 'contatos' %}">Contato</a>
+        </nav>
+    </header>
+
+    <div class="layout-container">
+        
+        <aside class="sidebar">
+            <h3>Desenvolvimento</h3>
+            <ul>
+                <li><a href="https://nexapb.com.br">Sistemas Nexa</a></li>
+                <li><a href="#">Automações (n8n)</a></li>
+                <li><a href="#">Projetos Python</a></li>
+            </ul>
+
+            <h3>Habilidades e Conhecimentos</h3>
+            <ul>
+                <li><a href="#">Programação com Python</a></li>
+                <li><a href="#">Desenvolvimento Web</a></li>
+                <li><a href="#">Automação de Processos</a></li>
+                <li><a href="#">Análise de Dados</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            {% block content %}
+            {% endblock %}
+        </main>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mateus Erik. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

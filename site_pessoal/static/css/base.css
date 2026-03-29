@@ -1,0 +1,140 @@
+/* Variáveis de cores e tamanhos */
+:root {
+    --bg-color: #121212;
+    --surface-color: #1e1e1e;
+    --primary-color: #007bff;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --navbar-height: 70px;
+    --sidebar-width: 250px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* === TIPOGRAFIA E ELEMENTOS PADRÃO === */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+ul, ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem; 
+}
+
+/* === NAVBAR === */
+.navbar {
+    background-color: var(--surface-color);
+    height: var(--navbar-height);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 2px solid var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* === LAYOUT CONTAINER (Segredo da divisão) === */
+.layout-container {
+    display: flex;
+    flex: 1; 
+}
+
+/* === SIDEBAR === */
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: #181818;
+    padding: 30px 20px;
+    border-right: 1px solid #333;
+}
+
+.sidebar h3 {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.sidebar h3:first-child {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0; 
+    margin-bottom: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 12px;
+}
+
+.sidebar ul li a {
+    color: var(--text-primary);
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* Efeito legal: o link empurra um pouquinho pra direita ao passar o mouse */
+.sidebar ul li a:hover {
+    color: var(--primary-color);
+    padding-left: 8px; 
+}
+
+/* === CONTEÚDO PRINCIPAL === */
+.content {
+    flex: 1; 
+    padding: 40px;
+    overflow-y: auto; 
+}
+
+/* === FOOTER === */
+footer {
+    background-color: var(--surface-color);
+    text-align: center;
+    padding: 15px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+}
