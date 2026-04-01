@@ -84,6 +84,10 @@ ul, ol {
     background-color: #181818;
     padding: 30px 20px;
     border-right: 1px solid #333;
+    position: sticky;
+    top: var(--navbar-height); 
+    height: calc(100vh - var(--navbar-height));
+    overflow-y: auto; 
 }
 
 .sidebar h3 {
@@ -137,4 +141,64 @@ footer {
     color: var(--text-secondary);
     font-size: 0.9rem;
     border-top: 1px solid #333;
+}
+
+/* =========================================
+   📱 RESPONSIVIDADE (Telas de Celular e Tablet)
+========================================= */
+@media (max-width: 768px) {
+    /* 1. Navbar: Empilha a logo e os links */
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 15px; 
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        font-size: 1rem;
+    }
+
+    .navbar .logo {
+        font-size: 1.3rem; 
+    }
+
+    /* 2. Layout Principal: Coloca a Sidebar em cima e o Conteúdo embaixo */
+    .layout-container {
+        flex-direction: column;
+    }
+
+    /* 3. Sidebar: esxconde a sidebar no celular*/
+    .sidebar {
+        display: none; 
+    }
+
+    /* 4. Ajustes de Espaçamento: Reduz as margens para caber na telinha */
+    .content {
+        padding: 20px 10px;
+    }
+
+    .container-principal {
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .sessao {
+        padding: 25px 20px;
+    }
+
+    /* 5. Foto de Perfil: Vai para cima do texto e centraliza tudo */
+    .perfil-apresentacao {
+        flex-direction: column-reverse; /* Truque: inverte a ordem (foto sobe) */
+        text-align: center;
+        gap: 20px;
+    }
 }
