@@ -1,0 +1,69 @@
+/* =========================================
+   ESTILOS DA PÁGINA DE CONTATO
+========================================= */
+.grid-contatos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card-contato {
+    background-color: var(--surface-color);
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-primary);
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icone-contato {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.card-contato h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+}
+
+.card-contato p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Efeitos Hover (Cores específicas para cada rede) */
+.card-contato.linkedin:hover {
+    border-color: #0077b5;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 119, 181, 0.2);
+}
+.card-contato.linkedin:hover h3 { color: #0077b5; }
+
+.card-contato.github:hover {
+    border-color: #fafafa;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(250, 250, 250, 0.1);
+}
+.card-contato.github:hover h3 { color: #fafafa; }
+
+.card-contato.whatsapp:hover {
+    border-color: #25d366;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.2);
+}
+.card-contato.whatsapp:hover h3 { color: #25d366; }
+
+.card-contato.email:hover {
+    border-color: #ea4335;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(234, 67, 53, 0.2);
+}
+.card-contato.email:hover h3 { color: #ea4335; }
